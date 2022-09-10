@@ -1,0 +1,32 @@
+create venv
+venv\Scripts\activate
+pip install django
+python manage.py starapp main
+
+
+python manage.py runserver
+
+Un package ismou kif ism il project {
+    __init__.py
+    asgi.py
+    wsgi.py
+    settings.py
+    urls.py
+}
+
+applications ("main", "users", "cheques") {
+    __init__.py
+    admin.py
+    apps.py
+    tests.py
+    models.py ==> entities
+    views.py ==> controllers
+}
+
+templates ==> HTML
+
+static ==> Static files (CSS, JavaScript, Images)
+
+First : Create a html page in templates directory
+Second : Create view that renders that html page
+Third : Add url to urls.py that point to that view

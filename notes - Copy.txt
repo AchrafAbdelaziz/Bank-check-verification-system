@@ -1,0 +1,36 @@
+venv\Scripts\activate
+pip uninstall -r requirements.txt
+pip install -r requirements.txt
+pip3 freeze > requirements.txt
+
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell
+
+python manage.py collectstatic
+
+python manage.py sqlmigrate partie_externe 0004
+
+root
+no_pwd
+
+
+
+print(dir(request))
+
+mkdir .ebextensions
+
+deactivate
+
+
+pip install awsebcli --upgrade --ignore-installed six
+
+
+eb init -p python-3.7 django-tutorial
+eb init
+eb create django-env
+eb status
+ALLOWED_HOSTS = ['******.elasticbeanstalk.com']
+eb deploy
+eb open
